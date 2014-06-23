@@ -1,0 +1,60 @@
+:default:
+  :content_users_group: WWIT-S-SalesProjectionsSalesContentUsers
+  :active_directory_group: WWIT-S-SalesProjectionsSystest
+  :validate_xhtml: false
+  :currency_sap_path: \\worldwide\dfs\wdl\System Folders\SAP\DEV\SPIN\EXRATES.txt
+
+:localhost:
+  :cils_environment: localhost
+  :server: localhost
+  :fqdn: localhost
+  :port: 44001
+  :database:
+    :host: (local)
+    :username: SalesProjectionsUser
+    :password: SalesProjectionsUser
+    :database: SalesProjections
+  :active_directory_group: WWIT-S-SalesProjectionsDev
+
+:systest:
+  :cils_environment: systest
+  :server: Spin-ui-systest
+  :fqdn: Spin-ui-systest.worldwide.bbc.co.uk
+  :port: 44001
+  :database:
+    :adapter: sqlserver
+    :mode: dblib
+    :host: wwldbms7006
+    :username: SalesProjectionsUser
+    :password: SalesProjectionsUser
+    :database: SalesProjections
+
+:systestbranch1:
+  :cils_environment: balanced_regionalisation
+  :server: spin-ui-systest
+  :fqdn: spin-ui-systest.worldwide.bbc.co.uk
+  :port: 44002
+  :database:
+    :host: wwldbms7006
+    :username: SalesProjectionsUser
+    :password: SalesProjectionsUser
+    :database: SalesProjections_br
+
+:systestbranch2:
+  :cils_environment: systestbranch2
+  :server: wgb01wa7002
+  :fqdn: wgb01wa7002.worldwide.bbc.co.uk
+  :port: 44003
+  :database:
+    :host: wwldbms7006
+    :username: SalesProjectionsUser
+    :password: SalesProjectionsUser
+    :database: SalesProjectionsBranch2
+    
+:ekinsdw1:
+  :cils_environment: systestbranch1
+  :database:
+    :host: wwldbms7006
+    :username: SalesProjectionsUser
+    :password: SalesProjectionsUser
+    :database: SalesProjections_Derek
